@@ -1,0 +1,9 @@
+services:
+  ewallet-web:
+    build: .
+    ports:
+      - "3000:3000" # Map host port 3000 to container port 3000
+    environment:
+      - NODE_ENV=production
+    volumes:
+      - .:/app # Optional: mount the current directory to /app in the container for live development
