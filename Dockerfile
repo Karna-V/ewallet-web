@@ -1,8 +1,7 @@
 # Dockerfile
 
 # Use the official Node.js image as a base
-FROM node:20.18.0
-
+FROM node:18.18.0-bullseye
 # Set the working directory inside the container
 WORKDIR /app
 
@@ -10,8 +9,7 @@ WORKDIR /app
 COPY package*.json ./
 
 # Install production dependencies only
-RUN npm install -f --only=production
-
+RUN npm install --save-dev @types/react@18.0.1 --force
 # Copy the rest of the application code
 COPY . .
 
