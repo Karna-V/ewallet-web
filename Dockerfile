@@ -1,7 +1,7 @@
 # Dockerfile
 
 # Use the official Node.js image as a base
-FROM node:18.18
+FROM node:20.18.0
 
 # Set the working directory inside the container
 WORKDIR /app
